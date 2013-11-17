@@ -36,8 +36,8 @@ func (r *Client) Read(key string) (Response) {
   r.callAndResponse("read", key)
   return r.response
 }
-func (r *Client) Create(key string) (Response) {
-  r.callAndResponse("create", key)
+func (r *Client) Create(key string, value string) (Response) {
+  r.callAndResponse("create", key + " " + value)
   return r.response
 }
 
